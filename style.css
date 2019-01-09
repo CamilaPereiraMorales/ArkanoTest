@@ -4,7 +4,19 @@
 .brand-logo{
     margin-left: 2%;
 }
+.Title{
+    margin-bottom: 4%;
+}
 .user-view{
     background-color: black;
     color: white;
+}
+.form-wrapper{
+    width: 40%;
+    text-align: center;
+}
+label{
+    color: black !important;
+    font-size: 20px !important;
+    margin-bottom: 2% !important;
 }
