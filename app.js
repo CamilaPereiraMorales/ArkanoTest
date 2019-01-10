@@ -1,3 +1,5 @@
+window.onload = widget()
+currentT=0;
 // Sidenav Initialization
 
   $(document).ready(function(){
@@ -44,13 +46,13 @@ function guardar(){
 }
 
 //Leer documentos
-let dashboardData = document.getElementById("dashboard");
+let dashboardData = document.getElementById("dashboardData");
 db.collection("data").get().then((querySnapshot) => {
     dashboardData.innerHTML = "";
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
         dashboardData.innerHTML += `
-        <div class="col s12 m6 l3">
+        <div class="col s3">
         <div class="first-field">
                 <h3 id="first-field-value">${doc.data().nuevasCompras} </h3>
                 <h6>Nuevas Compras</h6>
@@ -60,7 +62,7 @@ db.collection("data").get().then((querySnapshot) => {
             </div>
             </div>
         </div>
-        <div class="col s12 m6 l3">
+        <div class="col s3">
         <div class="second-field">
                 <h3 id="second-field-value"> ${doc.data().incrementoCompras } %</h3>
                 <h6>Incremento de compras</h6>
@@ -70,7 +72,7 @@ db.collection("data").get().then((querySnapshot) => {
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l3">
+        <div class="col s3">
         <div class="third-field">
                 <h3 id="third-field-value"> ${doc.data().nuevosUsuarios}</h3>
                 <h6>Nuevos usuarios</h6>
@@ -80,7 +82,7 @@ db.collection("data").get().then((querySnapshot) => {
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l3">
+        <div class="col s3">
         <div class="fourth-field">
                 <h3 id="fourth-field-value"> ${doc.data().nuevasVisitas}</h3>
                 <h6>Nuevas Visitas</h6>
@@ -94,10 +96,21 @@ db.collection("data").get().then((querySnapshot) => {
     });
 });
 
+//widget de Clima
+function widget(){
+    let url = ('https://api.openweathermap.org/data/2.5/weather?q=santiago,CL&units=metric&appid=a3c0315b5dbf5da2a6f733fc543611b3')
 
-
- 
-
-
-//widget clima
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);  
+      const temperatura = Object.values(data);
+      const santiago = temperatura[3];
+      const currentT = santiago.temp;
+      console.log(currentT);
+       
+      document.getElementById("temperatura").innerHTML = currentT;
+  }) 
+  
+}
 
