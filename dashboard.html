@@ -78,7 +78,22 @@
 
 
 
-
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+   <script>
+     // Initialize Firebase
+     var config = {
+       apiKey: "AIzaSyC4OO4NkJ_VB3lY3Qqu72FhwO2jOmCiGvs",
+       authDomain: "e-sales-arkanotest.firebaseapp.com",
+       databaseURL: "https://e-sales-arkanotest.firebaseio.com",
+       projectId: "e-sales-arkanotest",
+       storageBucket: "e-sales-arkanotest.appspot.com",
+       messagingSenderId: "974980130042"
+     };
+     firebase.initializeApp(config);
+   </script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
