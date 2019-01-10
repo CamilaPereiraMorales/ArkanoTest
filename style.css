@@ -20,3 +20,34 @@ label{
     font-size: 20px !important;
     margin-bottom: 2% !important;
 }
+
+.info-container{
+    text-align: center;
+    
+}
+.info{
+    color:white;
+}
+.first-field{
+    background-color: rgb(47, 255, 82);
+    margin-right: 4px;
+    color:white;
+}
+
+.second-field{
+    background-color: palevioletred;
+    margin-right: 4px;
+    color:white;
+}
+
+.third-field{
+    background-color: turquoise;
+    margin-right: 4px;
+    color:white;
+}
+
+.fourth-field{
+    background-color: orangered;
+    margin-right: 4px;
+    color:white;
+}
