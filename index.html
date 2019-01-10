@@ -40,29 +40,29 @@
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12">
-                  <input placeholder="Nuevas Compras" id="nuevas-compras" type="text">
+                  <input placeholder="Nuevas Compras" id="nuevas-compras" type="number" required>
                   <label for="first_name">Cantidad de nuevas compras</label>
                 </div>
                 <div class="input-field col s12">
-                  <input placeholder="Incremento de Compras"id="incremento-compras" type="text" >
+                  <input placeholder="Incremento de Compras"id="incremento-compras" type="number" required >
                   <label for="last_name">Incremento de compras</label>
                 </div>
               </div>
               
               <div class="row">
                 <div class="input-field col s12">
-                  <input placeholder="Nuevos Usuarios"id="new-users" type="text" >
+                  <input placeholder="Nuevos Usuarios"id="nuevos-usuarios" type="number" required>
                   <label for="password">Cantidad nuevos usuarios</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input placeholder="Nuevas Visitas"id="nuevas-visitas" type="number" >
+                  <input placeholder="Nuevas Visitas"id="nuevas-visitas" type="number" required>
                   <label for="cantidad-visitas">Cantidad nuevas visitas</label>
                 </div>
               </div>
               
-            <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
+            <button class="btn waves-effect waves-light" id="button" type="submit" name="action" onclick="guardar()">Guardar
                     <i class="material-icons right">send</i>
                   </button>
             </form>
@@ -75,18 +75,7 @@
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>   
 <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC4OO4NkJ_VB3lY3Qqu72FhwO2jOmCiGvs",
-    authDomain: "e-sales-arkanotest.firebaseapp.com",
-    databaseURL: "https://e-sales-arkanotest.firebaseio.com",
-    projectId: "e-sales-arkanotest",
-    storageBucket: "e-sales-arkanotest.appspot.com",
-    messagingSenderId: "974980130042"
-  };
-  firebase.initializeApp(config);
-</script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
